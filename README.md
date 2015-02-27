@@ -24,4 +24,4 @@ This sample configures the revision history of pages with two options:
 ### Additional resources:
 
 For more detailed explanation on the code see:
-[My personal blog - Sitefinity tips and tricks](http://sitefinitytipsandtricks/revision-history-settings)
+[My personal blog - Sitefinity tips and tricks](http://www.sitefinitytipsandtricks.net/2015/02/27/revision-history-settings/)
