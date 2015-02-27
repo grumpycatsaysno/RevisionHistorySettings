@@ -85,11 +85,15 @@ namespace SitefinityWebApp.RevisionHistory
                 {
                     var earliestDate = lastChange.LastModified.AddDays(daysToKeep * (-1));
 
-                    var changesToRemoveByDate = changes.Where(a => a.LastModified < earliestDate);
+                    versionManager.TruncateVersions(pageData.Id, earliestDate);
 
-                    if (changesToRemoveByDate.Count() > 0)
+                    versionManager.SaveChanges();
+
+                    var leftChanges = versionManager.GetItemVersionHistory(pageData.Id);
+
+                    if (leftChanges.Count() > 0)
                     {
-                        var changesToRemove = changesToRemoveByDate
+                        var changesToRemove = leftChanges
                         .OrderByDescending(c => c.Version)
                         .Skip(revisionsCount)
                         .AsEnumerable();
