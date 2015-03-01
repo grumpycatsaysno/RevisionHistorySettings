@@ -9,13 +9,16 @@ This sample configures the revision history of pages with two options:
 - by number of versions to keep
 - by time (not older than X days)
 
+### License information
+
+This project has been released under the Apache License, version 2.0, the text of which is included in the repository.
+
 ### Requirements
 
 * Sitefinity license
 * .NET Framework 4
 * Visual Studio 2012
 * Microsoft SQL Server 2008R2 or later versions
-
 
 ### Video demo:
  
